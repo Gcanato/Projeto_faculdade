@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="content/index.css" rel="stylesheet" />
+    <link href="content/bootstrap.css" rel="stylesheet" />
+    <title>Home</title>
+</head>
+<body >
+    <header>
+        <nav class="navtop">
+            
+            <img src="img/logo.png" width="10%" height="15%">
+			<a href="#" id="af">Quem somos</a>
+            <a href="#" id="ao">Fale Conosco</a>
+            <span>
+                <img src="img/IconesRedesSociais/whatsapp.png" width="15" id="whats" />
+                <span class="number"> (XX) XXXXX-XXXX</span> <span class="barra">|</span>
+            </span>
+            <span>
+                <img src="img/IconesRedesSociais/facebook.png" width="15" id="face" />
+                <span class="number">Facebook</span> <span class="barra">|</span>
+            </span>
+            <span>
+                <img src="img/IconesRedesSociais/instagram.png" width="17" id="insta" />
+                <span class="number">instagram</span> <span class="barra">|</span>
+            </span>
+            <span>Email: email@gmail.com</span> <span class="barra">|</span>
+			
+			<span>
+			
+			<?php
+			if (isset($_COOKIE['login'])){
+			$login_cookie = $_COOKIE['login'];
+			if(isset($login_cookie)){
+			echo "Bem-Vindo, $login_cookie";
+            ?> <a href= "index.php">Sair</a> 
+            <?php
+			}
+			}
+			?>
+			</span>
+			
+	</nav>
+        <ul>
+            <li><a href="funcionario.php">Funcionários</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Administrador</a></li>
+            <li><a href="#">Vendas</a></li>
+			<li><a href="login.php">Login</a></li>
+			
+        </ul>
+	</header>
+</body>
+</html>
